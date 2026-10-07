@@ -1,0 +1,29 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+psycopg2-binary==2.9.9
+alembic==1.13.2
+pydantic==2.9.2
+pydantic-settings==2.5.2
+python-jose[cryptography]==3.3.0
+argon2-cffi==23.1.0
+python-multipart==0.0.9
+python-dotenv==1.0.1
+
+# OCR / file processing
+pytesseract==0.3.13
+pdf2image==1.17.0
+Pillow==10.4.0
+easyocr==1.7.2
+
+# Background tasks / caching
+redis==5.0.8
+celery==5.4.0
+
+# Export
+openpyxl==3.1.5
+reportlab==4.2.2
+
+# Testing
+pytest==8.3.3
+httpx==0.27.2
