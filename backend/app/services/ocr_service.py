@@ -115,26 +115,11 @@ def _preprocess_image(img: Image.Image) -> Image.Image:
 def _load_pages(file_bytes: bytes, file_ext: str) -> list:
 
     """Return one PIL image per PDF page, or one image for image uploads."""
-
-    if file_ext.lower() == ".pdf":
-
-        return convert_from_bytes(
-
-            file_bytes,
-
-            dpi=300,
-
-            poppler_path=(
-
-                r"C:\Users\Asus\AppData\Local\Microsoft\WinGet\Packages"
-
-                r"\oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe"
-
-                r"\poppler-25.07.0\Library\bin"
-
-            ),
-
-        )
+if file_ext.lower() == ".pdf":
+    return convert_from_bytes(
+        file_bytes,
+        dpi=300,
+    )
 
 
 
