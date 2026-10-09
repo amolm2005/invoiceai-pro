@@ -113,15 +113,12 @@ def _preprocess_image(img: Image.Image) -> Image.Image:
 
 
 def _load_pages(file_bytes: bytes, file_ext: str) -> list:
-
     """Return one PIL image per PDF page, or one image for image uploads."""
-if file_ext.lower() == ".pdf":
-    return convert_from_bytes(
-        file_bytes,
-        dpi=300,
-    )
-
-
+    if file_ext.lower() == ".pdf":
+        return convert_from_bytes(
+            file_bytes,
+            dpi=300,
+        )
 
     return [Image.open(io.BytesIO(file_bytes))]
 
